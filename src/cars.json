@@ -3,19 +3,26 @@
       "id": 1,
       "name": "Volvo",
       "description": "Mycket elegant familjevänlig",
-      "price": "50000sek"
+      "price": "150 000 sek"
     },
     {
       "id": 2,
       "name": "Tesla",
       "description": "Miljövänlig och högteknologisk",
-      "price": "80000sek"
+      "price": "80 000 sek"
     },
     {
       "id": 3,
       "name": "Volkswagen",
       "description": "Tillförlitlig och prisvärd",
-      "price": "70000sek"
-    }
+      "price": "70 000 sek"
+    },
+    {
+        "id": 4,
+        "name": "Landrover",
+        "description": "lyx-SUV",
+        "price": "190 000 sek"
+      }
+
   ]
   

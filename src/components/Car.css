@@ -1,0 +1,61 @@
+.Car {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.5s;
+  }
+
+  .input-box{
+    width:auto ;
+    height: 40px;
+    padding: 20%;
+    font-size: 16px;
+    border: none;
+    text-align: center;
+  }
+
+  .Car-input {
+    justify-content: center; 
+    align-items: center; 
+    width: 280px; 
+    height:150px;
+    font-size: 20px; 
+    padding: 10px; 
+    border-radius: 5px; 
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.3s ease; 
+    text-align: center;
+    transition-duration: 0.5s; 
+    margin: 20px auto;
+    transition-duration: 0.5s;
+
+    &:hover {
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    }
+  
+  
+    &:focus {
+      outline: none; 
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.4); 
+    }
+  }
+  
+  .Car:hover {
+    transform: scale(1.1);
+  }
+  
+  .Car div {
+    width: 80px;
+    height: 80px;
+    background-color: skyblue;
+    transition-duration: 0.5s;
+  }
+  
+  .Car .scaled {
+    transform: scale(0.7);
+    background-color: pink;
+    transition-duration: 0.5s;
+  }
+  

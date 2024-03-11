@@ -1,38 +1,41 @@
 import React, { useState, useEffect, useMemo } from "react";
 import Car from "./components/Car";
+import carsData from "./cars.json"; // Importera bildata från json-fil
 
 function App() {
   const [cars, setCars] = useState([]);
-  const [searchItem, setSearchItem] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    fetch("/cars.json") // Se till att sökvägen till filen är korrekt
-      .then((response) => response.json())
-      .then((data) => setCars(data))
-      .catch((error) => console.error("Error fetching cars data: ", error));
+    // Uppdatera bilar state med data från json-fil när komponenten mountas
+    setCars(carsData);
   }, []);
 
   const handleSearch = (event) => {
-    setSearchItem(event.target.value);
+    // Uppdatera söktermen när användaren skriver i input-fältet
+    setSearchTerm(event.target.value);
   };
 
   const filteredCars = useMemo(() => {
+    // Filtrera bilar baserat på söktermen
     return cars.filter((car) =>
-      car.name.toLowerCase().includes(searchItem.toLowerCase())
-    ).sort((a, b) => a.price - b.price);
-  }, [cars, searchItem]);
+      car.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [cars, searchTerm]);
 
   return (
-    <div className="App">
+    <div className="Car-input">
       <input
+      className="input-box"
         type="text"
-        placeholder="Search by car"
-        value={searchItem}
+        placeholder="Search by car name "
+        value={searchTerm}
         onChange={handleSearch}
       />
-      {filteredCars.map((car) => (
-        <Car key={car.id} car={car} />
-      ))}
+      {searchTerm &&
+        filteredCars.map((car) => (
+          <Car key={car.id} car={car} />
+        ))}
     </div>
   );
 }
