@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "name": "Volvo",
+      "description": "Mycket elegant familjevänlig",
+      "price": "50000sek"
+    },
+    {
+      "id": 2,
+      "name": "Tesla",
+      "description": "Miljövänlig och högteknologisk",
+      "price": "80000sek"
+    },
+    {
+      "id": 3,
+      "name": "Volkswagen",
+      "description": "Tillförlitlig och prisvärd",
+      "price": "70000sek"
+    }
+  ]
+  
